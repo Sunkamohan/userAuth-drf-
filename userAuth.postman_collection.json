@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "6c6d7135-731e-407d-9c9d-11d5c090fdbd",
+		"name": "userAuth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "sm",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "Mohan10sunka@113",
+							"type": "default"
+						},
+						{
+							"key": "first_name",
+							"value": "s",
+							"type": "default"
+						},
+						{
+							"key": "last_name",
+							"value": "m",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "sm113sunkamohan@gmail.com",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify otp email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "sm113sunkamohan@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "otp",
+							"value": "095PBM",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/verify-otp/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"verify-otp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login with otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "sm113sunkamohan@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "otp",
+							"value": "480505",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forget password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "sm113sunkamohan@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "otp",
+							"value": "095PBM",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/forgot-password/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"forgot-password",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "sm113sunkamohan@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "otp",
+							"value": "572096",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "Mohan10sunka@113",
+							"type": "default"
+						},
+						{
+							"key": "confirm_password",
+							"value": "Mohan10sunka@113",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/accounts/reset-password/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"accounts",
+						"reset-password",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
